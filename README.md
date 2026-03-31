@@ -7,6 +7,8 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-orange?style=flat-square&logo=scikit-learn)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
+> **Live Demo → [https://cinematch-w2v-recommender.onrender.com](https://credit-card-fraud-detection-dashboard-npi1.onrender.com)**
+
 ---
 
 ## Table of Contents
