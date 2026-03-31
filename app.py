@@ -17,6 +17,7 @@ from flask import Flask, render_template, request, jsonify
 from predictor import FraudPredictor
 
 # ── Logging ───────────────────────────────────────────────────────────────────
+Path("logs").mkdir(exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s  %(levelname)-8s  %(message)s",
