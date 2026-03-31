@@ -1,0 +1,56 @@
+2026-03-30 21:31:40,149  INFO      =======================================================
+2026-03-30 21:31:40,150  INFO      CREDIT CARD FRAUD DETECTION — TRAINING PIPELINE
+2026-03-30 21:31:40,150  INFO      =======================================================
+2026-03-30 21:31:40,151  INFO      Loading data from: creditcard.csv
+2026-03-30 21:31:42,153  INFO      Dataset shape: (284807, 31) | Fraud rate: 0.1727%
+2026-03-30 21:31:43,065  INFO      Split → Train: 170,883 | Val: 56,962 | Test: 56,962
+2026-03-30 21:31:43,164  INFO      Scaler saved.
+2026-03-30 21:31:43,195  INFO      Applying SMOTE to training data...
+2026-03-30 21:34:39,723  INFO      =======================================================
+2026-03-30 21:34:39,724  INFO      CREDIT CARD FRAUD DETECTION — TRAINING PIPELINE
+2026-03-30 21:34:39,725  INFO      =======================================================
+2026-03-30 21:34:39,726  INFO      Loading data from: creditcard.csv
+2026-03-30 21:34:42,481  INFO      Dataset shape: (284807, 31) | Fraud rate: 0.1727%
+2026-03-30 21:34:43,434  INFO      Split → Train: 170,883 | Val: 56,962 | Test: 56,962
+2026-03-30 21:34:43,536  INFO      Scaler saved.
+2026-03-30 21:34:43,566  INFO      Applying SMOTE to training data...
+2026-03-30 21:34:46,977  INFO      Before SMOTE → Legit: 170,588 | Fraud: 295
+2026-03-30 21:34:46,978  INFO      After  SMOTE → Legit: 170,588  | Fraud: 25,588
+2026-03-30 21:34:46,978  INFO      Running RandomizedSearchCV (20 iterations × 5-fold CV)...
+2026-03-30 23:18:20,977  INFO      =======================================================
+2026-03-30 23:18:20,979  INFO      CREDIT CARD FRAUD DETECTION — TRAINING PIPELINE
+2026-03-30 23:18:20,982  INFO      =======================================================
+2026-03-30 23:18:20,982  INFO      Loading data from: creditcard.csv
+2026-03-30 23:18:25,018  INFO      Dataset shape: (284807, 31) | Fraud rate: 0.1727%
+2026-03-30 23:18:25,752  INFO      Split → Train: 170,883 | Val: 56,962 | Test: 56,962
+2026-03-30 23:18:25,834  INFO      Scaler saved.
+2026-03-30 23:18:25,861  INFO      Applying SMOTE to training data...
+2026-03-30 23:18:28,097  INFO      Before SMOTE → Legit: 170,588 | Fraud: 295
+2026-03-30 23:18:28,097  INFO      After  SMOTE → Legit: 170,588  | Fraud: 25,588
+2026-03-30 23:18:28,098  INFO      Running RandomizedSearchCV (20 iterations × 5-fold CV)...
+2026-03-31 01:16:07,518  INFO      Best CV PR-AUC : 0.9999
+2026-03-31 01:16:07,532  INFO      Best params    : {'n_estimators': 400, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 0.3, 'max_depth': None, 'class_weight': 'balanced_subsample'}
+2026-03-31 01:16:08,401  INFO      Optimal threshold: 0.7013  (Val F1=0.8156)
+2026-03-31 01:16:09,539  INFO      =======================================================
+2026-03-31 01:16:09,540  INFO      TEST SET RESULTS
+2026-03-31 01:16:09,540  INFO      =======================================================
+2026-03-31 01:16:09,541  INFO        threshold   : 0.7013
+2026-03-31 01:16:09,542  INFO        auc_roc     : 0.9825
+2026-03-31 01:16:09,542  INFO        pr_auc      : 0.8494
+2026-03-31 01:16:09,542  INFO        f1          : 0.8065
+2026-03-31 01:16:09,543  INFO        precision   : 0.8523
+2026-03-31 01:16:09,543  INFO        recall      : 0.7653
+2026-03-31 01:16:09,575  INFO      
+              precision    recall  f1-score   support
+
+       Legit       1.00      1.00      1.00     56864
+       Fraud       0.85      0.77      0.81        98
+
+    accuracy                           1.00     56962
+   macro avg       0.93      0.88      0.90     56962
+weighted avg       1.00      1.00      1.00     56962
+
+2026-03-31 01:16:09,578  INFO      =======================================================
+2026-03-31 01:16:10,021  INFO      Model saved → models/rf_model.joblib
+2026-03-31 01:16:10,022  INFO      Metadata    → models/metadata.json
+2026-03-31 01:16:10,022  INFO      Training complete.
