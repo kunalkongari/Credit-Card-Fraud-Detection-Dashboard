@@ -1,0 +1,15 @@
+# Deploy to Render (free tier)
+services:
+  - type: web
+    name: Credit-Card-Fraud-Detection-Dashboard
+    env: python
+
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+
+    startCommand: gunicorn app:app --workers 2 --bind 0.0.0.0:$PORT --timeout 120
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.8
